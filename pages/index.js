@@ -1,7 +1,12 @@
-export default function Home() {
+import EvenList from "../components/events/event-list";
+import { getFeaturedEvents } from "../dummy-data";
+
+export default function HomePage() {
+  const featureEvents = getFeaturedEvents();
+  console.log(featureEvents);
   return (
     <div>
-      <h1>Hello Next World</h1>
+      <EvenList items={featureEvents}></EvenList>
     </div>
   );
 }
